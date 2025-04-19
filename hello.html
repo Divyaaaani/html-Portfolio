@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Hello World</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .popup {
+      position: absolute;
+      left: 50%;
+      bottom: -100px;
+      transform: translate(-50%, 0);
+      /* background-color: black; */
+      color: white;
+      padding: 2px solid rgb(214, 17, 17);
+      
+      font-size: 150px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: popToCenter 1s ease-out 1s forwards;
+      text-decoration: underline rgb(102, 101, 101);
+    }
+
+    @keyframes popToCenter {
+      to {
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        opacity: 1;
+      }
+    }
+      #heart { 
+    position: relative; 
+    width: 100px; 
+    height: 90px; 
+} 
+
+#heart:before, #heart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 0; 
+    width: 50px; 
+    height: 80px; 
+    background: rgb(205, 37, 37); 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg); 
+    transform-origin: 0 100%; 
+} 
+.pop{
+  position: absolute;
+      left: 50%;
+      bottom: -150px;
+      transform: translate(-50%, 0);
+      animation: popToCenter 1.5s ease-out 1.5s forwards;
+}
+#heart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%; 
+}
+    
+  </style>
+</head>
+<body>
+
+  <div class="popup">HELLO WORLD</div>
+  <div id="heart" class="pop"></div>
+ 
+
+</body>
+</html>
